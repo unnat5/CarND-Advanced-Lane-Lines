@@ -80,5 +80,5 @@ I then used the output objpoints and imgpoints to compute the camera calibration
 - Once I get all the data I fit a polynomial line through these data points with help of `np.polyfit(xlane,ylane,2)` and degree of polynomial is 2.
 - And other thing which I have done in my implementation is, I have taken weighted average for lane lines weight. Something like this `newValue = newValue*0.4 + oldValue*0.6`.
 
-![Result](./img_readme/test.jpg)
+![Result](./img_readme/test_out.png)
 
