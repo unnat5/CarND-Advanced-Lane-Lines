@@ -1,6 +1,6 @@
 ## Advanced Lane Finding
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-![Output](./img_readme/advancelaneFinder.gif)
+![Output](./img_readme/out.gif)
 
 
 
@@ -81,4 +81,8 @@ I then used the output objpoints and imgpoints to compute the camera calibration
 - And other thing which I have done in my implementation is, I have taken weighted average for lane lines weight. Something like this `newValue = newValue*0.4 + oldValue*0.6`.
 
 ![Result](./img_readme/test_out.png)
+
+## Discussion
+The difficulty is to recognize the yellow and white lane lines at the same time under different lighting condition. When there is shadow casting on the lane, many pixels at the edges of the shadow are recognized as the part the lane line, because I have applied thresholding to gradients. I mitigate this by reducing the searching range in the polynomial fitting stage. There could be a more robust approach where some specific line detectors are established to distiguish the line from the shadow considering different lighting condition.
+
 
